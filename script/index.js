@@ -1,4 +1,4 @@
-const pokedex = [
+/*  const pokedex = [
     {name: "Bulbasaur", category: "Seed", abilities: "Overgrow", type: "Grama / Veneno"},
     {name: "Charmander", category: "Lizard", abilities: "Blaze", type: "Fogo"},
     {name: "Squirtle", category: "Tiny Turtle", abilities: "Torrent", type: "Água"},
@@ -51,3 +51,4 @@ function main() {
 }
 
 main ();
+*/
