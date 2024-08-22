@@ -65,4 +65,67 @@
 
 /*----------Segundo Bloco----------*/
 
+.bannerSecondBlock {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;  
 
+}
+
+.searchSecondBlock {
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight:700;
+    background-color:#F19500;
+    color:  #000000;
+    position: absolute;
+    width: 140px;
+    height: 44px; 
+    overflow: hidden;
+    transform: translate(64px, 522px);
+}
+
+.subTitleSecondBlock {
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight:700;
+    color:  #F19500;
+    position: absolute;
+    width: 100%;
+    height: 540px; 
+    overflow: hidden;
+    transform: translate(64px, 257px);
+}
+
+
+
+.descriptionSecondBlock {
+    font-family: "Chakra Petch";
+    font-size: 16px;
+    color:  #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 540px; 
+    overflow: hidden;
+    transform: translate(64px, 450px);
+}
+.titleSecondBlock {
+    font-family: "Chakra Petch";
+    font-size: 60px;
+    font-weight: bold;
+    color:  #000000;
+    position: absolute;
+    width: 500px;
+    height: 540px; 
+    overflow: hidden;
+    text-align: right;
+    transform: translate(904px, 200px);
+}
+
+.bannerSecondBlock img {
+    overflow: hidden;
+    width: 100vw;
+    position: center;
+    height: auto;
+    display: block;
+}
