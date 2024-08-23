@@ -1,4 +1,4 @@
- /* const pokedex = [
+/* const pokedex = [
     {name: "Bulbasaur", category: "Seed", abilities: "Overgrow", type: "Grama / Veneno"},
     {name: "Charmander", category: "Lizard", abilities: "Blaze", type: "Fogo"},
     {name: "Squirtle", category: "Tiny Turtle", abilities: "Torrent", type: "Água"},
@@ -28,22 +28,25 @@ function searchPokemonByType(type){
 
 function main() {
     while(true) {
-        let search = prompt("Bem-vindo ao Pokédex!\n\nEscolha uma das opções abaixo para pesquisar um Pokémon:\n1. Buscar por nome\n2. Buscar por tipo\n\nDigite 'sair' para encerrar.");
+        let search = prompt("Bem-vindo ao Pokédex!\n\nEscolha uma das opções abaixo para pesquisar um Pokémon:\n\n1. Buscar por nome\n2. Buscar por tipo\n3. Encerrar");
 
-        if (search === '1'){
-            let name = prompt("Digite o nome do Pokémon que deseja buscar:");
-            alert(searchPokemonByName(name));
-        } else if (search === '2'){
-            let type = prompt("Digite o tipo do Pókemon (por exemplo: 'Fogo', 'Água', etc.):");
-            alert(searchPokemonByType(type));
-        } else if (search.toLowerCase() === 'sair'){
-            alert("Obrigado por usar a Pokédex! Até a próxima!");
-            break;
-        } else {
-            alert("Opção inválida. Por favor, digite '1' para buscar por nome, '2' para buscar por tipo ou 'sair' para encerrar.")
+        switch (search) {
+            case '1':
+                let name = prompt("Digite o nome do Pokémon que deseja buscar:");
+                alert(searchPokemonByName(name));
+                break;
+            case '2':
+                let type = prompt("Digite o tipo do Pokémon (por exemplo: 'Fogo', 'Água', etc.):");
+                alert(searchPokemonByType(type));
+                break;
+            case '3':
+                alert("Obrigado por usar a Pokédex! Até a próxima!");
+                return;
+            default:
+                alert("Opção inválida. Por favor, digite '1' para buscar por nome, '2' para buscar por tipo ou '3' para encerrar.");
+                break;
         }
     }
-
 }
 
 main ();
