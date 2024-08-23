@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    <script src="./script/index.js"></script>
-    <link rel="stylesheet" href="./CSS/headerandfooter.css">
-    <link rel="stylesheet" href="./CSS/contentsearch.css">
+    <script src="../script/index.js"></script>
+    <link rel="stylesheet" href="../CSS/headerandfooter.css">
+    <link rel="stylesheet" href="../CSS/contentsearch.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
     </style>
@@ -19,7 +19,7 @@
     <header>
         <div class="headerContainer">
             <div class="logoHeader">
-                <a href="/index.html"><img src="./assets/Logo.png" alt="Pokedex"></a>
+                <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex"></a>
             </div>
             <div class="linksHeader">
                 <ul>
@@ -35,9 +35,9 @@
     <!----------CONTENT---------->
     <div class="subTitulo">------ ÁREA POKEMON ------ </div>
     <div class="BlocoFoto"></div>
-        <div class="tituloPrincipal">PESQUISAR POKEMON</div>
-        <button class="Pesquisar">PESQUISAR</button>
-        <a class="banner"><img src="/pokedex_grupo_2/assets/Background.png"></a>
+    <div class="tituloPrincipal">PESQUISAR POKEMON</div>
+    <button class="Pesquisar">PESQUISAR</button>
+    <a class="banner"><img src="../assets/Background.png"></a>
 
         <div class="search-bar">
             <form action="#" method="GET">
@@ -45,9 +45,19 @@
             </form>
         </div>
 
-    
+        <!---------CONTEUDO--------->
+        <Section class="ResultPesquisa">
+           <ul>
+                <strong><li>Resultados da Pesquisa:</li></strong><br>
+            </ul>   
+        </Section>
 
-    </div>
+        <article class="conteudoCards">
+            <img src="../assets/Mew.png" alt="cards">
+            <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p><br> 
+        </article>
+
+    
 
 </body>
 
