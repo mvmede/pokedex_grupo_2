@@ -9,21 +9,21 @@
     {name: "Psyduck", category: "Duck", abilities: "Damp / Cloud Nine", type: "Água"},
 ]
 
-function searchPokemonByName(name){
+function searchPokemonByName(name) {
     const pokemon = pokedex.find(pokemon => pokemon.name.toLowerCase() === name.toLowerCase());
     return pokemon
         ? `Detalhes do Pokémon encontrado:\n\nNome: ${pokemon.name}\nCategoria: ${pokemon.category}\nHabilidades: ${pokemon.abilities}\nTipo: ${pokemon.type}`
         : "Pokémon não encontrado. Verifique o nome e tente novamente.";
 }
 
-function searchPokemonByType(type){
+function searchPokemonByType(type) {
     const result = pokedex.filter(pokemon => pokemon.type.toLowerCase().includes(type.toLowerCase()));
     return result.length === 0
         ? "Nenhum Pokémon encontrado para o tipo especificado. Verifique o tipo e tente novamente."
-        : `Resultado da pesquisa para o tipo '${type}':\n\n` + 
-            result.map(pokemon =>
-                `Nome: ${pokemon.name}\nCategoria: ${pokemon.category}\nHabilidades: ${pokemon.abilities}\nTipo: ${pokemon.type}`
-            ).join('\n-------------------------\n');
+        : `Resultado da pesquisa para o tipo '${type}':\n\n` +
+        result.map(pokemon =>
+            `Nome: ${pokemon.name}\nCategoria: ${pokemon.category}\nHabilidades: ${pokemon.abilities}\nTipo: ${pokemon.type}`
+        ).join('\n-------------------------\n');
 }
 
 function main() {
@@ -49,5 +49,4 @@ function main() {
     }
 }
 
-main ();
-*/
+main(); */

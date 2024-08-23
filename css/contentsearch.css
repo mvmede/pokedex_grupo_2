@@ -1,3 +1,9 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
 /*----------Primeiro Bloco----------*/
 
 .subTitulo {
@@ -9,7 +15,7 @@
     width: 100%;
     height: 540px; 
     overflow: hidden;
-    transform: translate(734px, 96px);
+    transform: translate(655px, 60px);
 }
 
 .tituloPrincipal {
@@ -21,7 +27,7 @@
     width: 754px;
     height: 540px; 
     overflow: hidden;
-    transform: translate(529px, 143px);
+    transform: translate(442px, 102px);
 }
 
 
@@ -29,6 +35,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;  
+    
 
 }
 
@@ -38,6 +45,7 @@
     position: center;
     height: auto;
     display: block;
+
 }
 
 /*----------Segundo Bloco----------*/
@@ -52,13 +60,13 @@
     width: 140px;
     height: 44px; 
     overflow: hidden;
-    transform: translate(760px, 528px);
+    transform: translate(666px, 488px);
 }
     .search-bar {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-94%, 114px);
+        transform: translate(-94%, 0px);
         width: 20%;
         display: flex;
         justify-content: center;
@@ -71,8 +79,17 @@
     width: 974px;
     border: 1px solid #000000;
     border-radius: 15px 15px 15px 15px; 
-    transform: translate(130px, 22px);
+    transform: translate(120px, 130px);
     text-align: center;
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.582);
+    background-color: #323232
+}
+/*----------Terceiro Bloco-----------*/
+.resultPesquisa,li {
+    text-align: center;
+}
+
+.ConteudoCards, li{
+    display: grid;
+
 }
