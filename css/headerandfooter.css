@@ -1,27 +1,42 @@
+/* HEADER */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #F19500;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 90px;
+    text-transform: uppercase;
 }
 
 .headerContainer {
-    background-color: #F19500;
     display: flex;
-    width: 100vw;
-    height: 90px; /* Altura do header */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
 }
 
 .logoHeader {
-    justify-content: center;
     margin-left: 64px;
-    margin-top: 28px;
     display: flex;
+    align-items: center;
 }
 
 .linksHeader {
-
-justify-content: center;
-align-items: center;
-
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .linksHeader ul {
@@ -42,9 +57,9 @@ align-items: center;
 .linksHeader ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-weight: bold;
-    padding: 0 30px; 
+    padding: 0 30px;
     height: 90px;
     display: flex;
     align-items: center;
