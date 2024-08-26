@@ -45,6 +45,7 @@ body {
     position: center;
     height: auto;
     display: block;
+    
 
 }
 
@@ -62,14 +63,14 @@ body {
     overflow: hidden;
     transform: translate(666px, 488px);
 }
-    .search-bar {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-94%, 0px);
-        width: 20%;
-        display: flex;
-        justify-content: center;
+ .search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-94%, 0px);
+    width: 20%;
+    display: flex;
+    justify-content: center;
         
 }
 
@@ -82,14 +83,60 @@ body {
     transform: translate(120px, 130px);
     text-align: center;
     color: #ffffff;
-    background-color: #323232
+    background-color: #323232;
+    font-family: "Chakra Petch";    ;
+    
 }
 /*----------Terceiro Bloco-----------*/
 .resultPesquisa,li {
     text-align: center;
+    font-family: "Chakra Petch";
 }
 
-.ConteudoCards, li{
-    display: grid;
 
+.text {
+    font-family: "Chakra Petch";
+    display: grid;
+    word-break: break-all;
+    transform: translate(367px, -274px);
+    width: 816px;
+};
+
+.ConteudoCards {
+    display: grid;
+    flex-direction: column;
+
+}
+
+@media (max-width: 768px) {
+    .tituloPrincipal {
+        font-size: 40px;
+        transform: translate(220px, 80px); /* Ajustar para centralizar melhor em tablets */
+    }
+    .subTitulo {
+        transform: translate(300px, 30px); /* Ajustar para centralizar melhor em tablets */
+    }
+    .Pesquisar {
+        transform: translate(50%, 20%); /* Melhor ajuste para botões em tablets */
+    }
+    .search-bar {
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .tituloPrincipal {
+        font-size: 30px;
+        transform: translate(50px, 50px); /* Ajustar para centralizar melhor em dispositivos móveis */
+    }
+    .subTitulo {
+        transform: translate(50px, 20px); /* Ajustar para centralizar melhor em dispositivos móveis */
+    }
+    .Pesquisar {
+        transform: translate(50%, 40px); /* Melhor ajuste para botões em dispositivos móveis */
+    }
+    .search-bar {
+        width: 90%;
+    }
 }
