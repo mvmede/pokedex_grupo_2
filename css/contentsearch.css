@@ -91,6 +91,7 @@ body {
 .resultPesquisa,li {
     text-align: center;
     font-family: "Chakra Petch";
+    
 }
 
 
@@ -98,14 +99,32 @@ body {
     font-family: "Chakra Petch";
     display: grid;
     word-break: break-all;
-    transform: translate(367px, -274px);
-    width: 816px;
-};
+    transform: translate(378px, -274px);
+    width: 764px;
+    font-size: 20px;
+}
 
 .ConteudoCards {
     display: grid;
     flex-direction: column;
+}
+.ConteudoCards,h1 {
+    font-size: 30px;
+    transform: translate(379px, 109px);
+    font-family: 'Chakra Petch';
 
+}
+.verCarta {
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight:700;
+    background-color:#F19500;
+    color:  #000000;
+    position: absolute;
+    width: 140px;
+    height: 44px; 
+    overflow: hidden;
+    transform: translate(1219px, -388px);
 }
 
 @media (max-width: 768px) {
@@ -121,6 +140,9 @@ body {
     }
     .search-bar {
         width: 80%;
+    }
+    .article {transform: translate(300px, 30px);
+
     }
 }
 
