@@ -116,6 +116,7 @@ footer {
     font-weight: 700;
     font-size: 21px;
     text-align: left;
+    text-transform: uppercase;
     margin: 0;
     line-height: 1;
     grid-column: 1 / -1;
