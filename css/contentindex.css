@@ -66,10 +66,18 @@
 /*----------Segundo Bloco----------*/
 
 .bannerSecondBlock {
+    
     overflow: hidden;
+    text-align: center;
     display: flex;
     justify-content: center;  
     width: 100vw;
+}
+
+.cardsSecondBlock {
+    transform: translate(120px, -437px);
+    position: absolute;
+    width: 899px;
 }
 
 .searchSecondBlock {
@@ -82,7 +90,7 @@
     width: 140px;
     height: 44px; 
     overflow: hidden;
-    transform: translate(64px, 522px);
+    transform: translate(1655px, 450px);
 }
 
 .subTitleSecondBlock {
@@ -93,18 +101,7 @@
     position: absolute;
     height: 540px; 
     overflow: hidden;
-
-}
-
-.descriptionSecondBlock {
-    font-family: "Chakra Petch";
-    font-size: 16px;
-    color:  #ffffff;
-    position: absolute;
-
-    height: 540px; 
-    overflow: hidden;
-
+    transform: translate(1730px, 180px);
 }
 
 .titleSecondBlock {
@@ -117,7 +114,7 @@
     height: 540px; 
     overflow: hidden;
     text-align: right;
-    transform: translate(904px, 200px);
+    transform: translate(1300px, 200px);
 }
 
 .bannerSecondBlock img {
