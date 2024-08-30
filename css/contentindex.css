@@ -1,6 +1,10 @@
 /*----------Primeiro Bloco----------*/
 
+body {
 
+    scroll-behavior: smooth;
+
+}
 
 .subTitle {
     font-family: "Chakra Petch";
