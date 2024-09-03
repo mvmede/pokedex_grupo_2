@@ -75,7 +75,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(./../../assets/backgroundSecondBlock.png);
+    background-image: url(//backgroundSecondBlock.png);
     width: 100%;
     height: 460px;
     display: flex;
@@ -136,7 +136,7 @@ body {
     align-items: center;
     width: auto;
     height: 600px;
-    background-image: url(../../../assets/Background.png);
+    background-image: url(./assets/Background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
