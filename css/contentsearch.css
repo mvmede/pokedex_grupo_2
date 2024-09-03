@@ -107,8 +107,14 @@ body {
 .ConteudoCards {
     display: grid;
     flex-direction: column;
+    width: 100%;
+    
 }
-.ConteudoCards,h1 {
+.imgmew {
+    display: flex;
+    
+}
+.ConteudoCards,h3 {
     font-size: 30px;
     transform: translate(379px, 109px);
     font-family: 'Chakra Petch';
@@ -126,6 +132,41 @@ body {
     overflow: hidden;
     transform: translate(1219px, -388px);
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    
+}
+
+.pagination .btn {
+    padding: 10px 20px;
+    background-color: #4A4A4A;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+
+.pagination .btn.active {
+    background-color: #F5A623;
+
+}
+
+.pagination .btn.previous,
+.pagination .btn.next {
+    background-color: #F5A623;
+}
+
+.pagination .dots {
+    padding: 10px 15px;
+    color: #4A4A4A;
+}
+
 
 @media (max-width: 768px) {
     .tituloPrincipal {
