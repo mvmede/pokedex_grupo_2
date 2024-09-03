@@ -136,7 +136,7 @@ body {
     align-items: center;
     width: auto;
     height: 600px;
-    background-image: url(../../assets/Background.png);
+    background-image: url(../assets/Background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
