@@ -125,3 +125,9 @@ h2 {
 .social-icons a:hover {
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 40px;
+    }
+}
