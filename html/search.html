@@ -34,17 +34,18 @@
     </header>
 
     <!----------CONTENT---------->
-    <div class="subTitulo">------ ÁREA POKEMON ------ </div>
-    <div class="BlocoFoto"></div>
-    <div class="tituloPrincipal">PESQUISAR POKEMON</div>
-    <button class="Pesquisar">PESQUISAR</button>
-    <a class="banner"><img src="../assets/Background.png"></a>
+    <div id="searchBlock" class="searchBlock">
 
+        <p class="subTitleSearch">------ ÁREA POKEMON ------ </p>
+        <h1 class="titleSearch">PESQUISAR POKEMON</h1>
         <div class="search-bar">
             <form action="#" method="GET">
-                <input type="text" placeholder="Digite o nome do seu Pokémon..." name="query">
+                <input class="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..." name="query">
             </form>
+            <button class="search" id="search">PESQUISAR</button>
         </div>
+
+    </div>
 
         <!---------CONTEUDO--------->
         <div class="search-results">

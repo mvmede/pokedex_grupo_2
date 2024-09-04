@@ -6,86 +6,71 @@ body {
 }
 /*----------Primeiro Bloco----------*/
 
-.subTitulo {
-    font-family: "Chakra Petch";
-    font-size: 14px;
-    font-weight:700;
-    color:  #F19500;
-    position: absolute;
-    width: 100%;
-    height: 540px; 
-    overflow: hidden;
-    transform: translate(655px, 60px);
-}
-
-.tituloPrincipal {
-    font-family: "Chakra Petch";
-    font-size: 60px;
-    font-weight: bold;
-    color:  #ffffff;
-    position: absolute;
-    width: 754px;
-    height: 540px; 
-    overflow: hidden;
-    transform: translate(442px, 102px);
-}
-
-
-.banner {
-    overflow: hidden;
+.searchBlock {
     display: flex;
-    justify-content: center;  
-    
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    background-image: url(../assets/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-}
 
-.banner img {
-    overflow: hidden;
-    width: 100vw;
-    position: center;
-    height: auto;
-    display: block;
-    
+    .subTitleSearch {
+        margin: 80px 0 0 0;
+        font-family: "Chakra Petch";
+        font-size: 14px;
+        font-weight: 700;
+        color: #F19500;
+    }
 
-}
+    .titleSearch {
+        margin: 15px 0 0 0;
+        font-family: "Chakra Petch";
+        font-size: 60px;
+        font-weight: bold;
+        color: #ffffff;
+    }
 
-/*----------Segundo Bloco----------*/
+    .search-bar {
 
-.Pesquisar {
-    font-family: "Chakra Petch";
-    font-size: 14px;
-    font-weight:700;
-    background-color:#F19500;
-    color:  #000000;
-    position: absolute;
-    width: 140px;
-    height: 44px; 
-    overflow: hidden;
-    transform: translate(666px, 488px);
-}
- .search-bar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-94%, 0px);
-    width: 20%;
-    display: flex;
-    justify-content: center;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         
-}
 
-.search-bar input[type="text"] {
-    padding: 18px;
-    font-size: 23px;
-    width: 974px;
-    border: 1px solid #000000;
-    border-radius: 15px 15px 15px 15px; 
-    transform: translate(120px, 130px);
-    text-align: center;
-    color: #ffffff;
-    background-color: #323232;
-    font-family: "Chakra Petch";    ;
-    
+        .searchInput {
+            margin: 200px 0 0 0;
+            padding: 18px;
+            font-size: 23px;
+            width: 974px;
+            border: 1px solid #000000;
+            border-radius: 15px 15px 15px 15px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #323232;
+            font-family: "Chakra Petch";
+        }
+
+        .search {
+
+            margin: 24px 0 0 0;
+
+            font-family: "Chakra Petch";
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #F19500;
+            color: #000000;
+            width: 140px;
+            height: 44px;
+
+        }
+    }
+
 }
 /*----------Terceiro Bloco-----------*/
 .search-results {
