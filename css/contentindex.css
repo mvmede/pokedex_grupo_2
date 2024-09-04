@@ -6,16 +6,31 @@ body {
 
 }
 
+.firstBlock {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/Banner.png);
+    width: 100%;
+    height: 540px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textsFirstBlock {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 120px 64px 60px 64px;
+}
+
 .subTitle {
     font-family: "Chakra Petch";
     font-size: 14px;
     font-weight: 700;
     color: #F19500;
-    position: absolute;
-    width: 100%vw;
-    height: 540px;
-    overflow: hidden;
-    transform: translate(64px, 257px);
 }
 
 .title {
@@ -23,22 +38,16 @@ body {
     font-size: 60px;
     font-weight: bold;
     color: #ffffff;
-    position: absolute;
-    width: 754px;
-    height: 540px;
-    overflow: hidden;
-    transform: translate(64px, 281px);
+    width: 600px;
+    text-align: left;
 }
 
 .description {
     font-family: "Chakra Petch";
     font-size: 16px;
     color: #ffffff;
-    position: absolute;
-    height: 30px;
-    width: 511px;
-    overflow: hidden;
-    transform: translate(64px, 450px);
+    width: 600px;
+    text-align: left;
 }
 
 .aboutus {
@@ -47,27 +56,11 @@ body {
     font-weight: 700;
     background-color: #F19500;
     color: #000000;
-    position: absolute;
     width: 140px;
     height: 44px;
-    overflow: hidden;
-    transform: translate(64px, 522px);
 }
 
-.banner {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
 
-.banner img {
-    overflow: hidden;
-    width: 100vw;
-    position: center;
-    height: auto;
-    display: block;
-}
 
 /*----------Segundo Bloco----------*/
 
@@ -75,7 +68,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../../assets/backgroundSecondBlock.png);
+    background-image: url(../assets/backgroundSecondBlock.png);
     width: 100%;
     height: 460px;
     display: flex;
@@ -136,7 +129,7 @@ body {
     align-items: center;
     width: auto;
     height: 600px;
-    background-image: url(../../assets/Background.png);
+    background-image: url(../assets/Background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
