@@ -1,13 +1,19 @@
 /*----------Primeiro Bloco----------*/
 
+body {
+
+    scroll-behavior: smooth;
+
+}
+
 .subTitle {
     font-family: "Chakra Petch";
     font-size: 14px;
-    font-weight:700;
-    color:  #F19500;
+    font-weight: 700;
+    color: #F19500;
     position: absolute;
     width: 100%vw;
-    height: 540px; 
+    height: 540px;
     overflow: hidden;
     transform: translate(64px, 257px);
 }
@@ -16,10 +22,10 @@
     font-family: "Chakra Petch";
     font-size: 60px;
     font-weight: bold;
-    color:  #ffffff;
+    color: #ffffff;
     position: absolute;
     width: 754px;
-    height: 540px; 
+    height: 540px;
     overflow: hidden;
     transform: translate(64px, 281px);
 }
@@ -27,9 +33,9 @@
 .description {
     font-family: "Chakra Petch";
     font-size: 16px;
-    color:  #ffffff;
+    color: #ffffff;
     position: absolute;
-    height: 540px; 
+    height: 30px;
     width: 511px;
     overflow: hidden;
     transform: translate(64px, 450px);
@@ -38,12 +44,12 @@
 .aboutus {
     font-family: "Chakra Petch";
     font-size: 14px;
-    font-weight:700;
-    background-color:#F19500;
-    color:  #000000;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
     position: absolute;
     width: 140px;
-    height: 44px; 
+    height: 44px;
     overflow: hidden;
     transform: translate(64px, 522px);
 }
@@ -51,7 +57,7 @@
 .banner {
     overflow: hidden;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     width: 100vw;
 }
 
@@ -65,65 +71,128 @@
 
 /*----------Segundo Bloco----------*/
 
-.bannerSecondBlock {
-    overflow: hidden;
+.secondBlock {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/backgroundSecondBlock.png);
+    width: 100%;
+    height: 460px;
     display: flex;
-    justify-content: center;  
-    width: 100vw;
+    justify-content: space-between;
 }
 
-.searchSecondBlock {
-    font-family: "Chakra Petch";
-    font-size: 14px;
-    font-weight:700;
-    background-color:#F19500;
-    color:  #000000;
-    position: absolute;
-    width: 140px;
-    height: 44px; 
-    overflow: hidden;
-    transform: translate(64px, 522px);
+.textsSecondBlock {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+    padding: 60px 64px 60px 0;
 }
 
 .subTitleSecondBlock {
     font-family: "Chakra Petch";
     font-size: 14px;
-    font-weight:700;
-    color:  #F19500;
-    position: absolute;
-    height: 540px; 
-    overflow: hidden;
-
-}
-
-.descriptionSecondBlock {
-    font-family: "Chakra Petch";
-    font-size: 16px;
-    color:  #ffffff;
-    position: absolute;
-
-    height: 540px; 
-    overflow: hidden;
-
+    font-weight: 700;
+    color: #F19500;
 }
 
 .titleSecondBlock {
     font-family: "Chakra Petch";
     font-size: 60px;
     font-weight: bold;
-    color:  #000000;
-    position: absolute;
-    width: 500px;
-    height: 540px; 
-    overflow: hidden;
+    color: #000000;
+    width: 600px;
     text-align: right;
-    transform: translate(904px, 200px);
+
 }
 
-.bannerSecondBlock img {
-    overflow: hidden;
-    width: 100vw;
-    position: center;
-    height: auto;
-    display: block;
+.textsSecondBlock button {
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
+    width: 140px;
+    height: 44px;
+}
+
+
+.cardsSecondBlock {
+    width: 750px;
+    height: 460px;
+    padding: 0 0 0 64px;
+    display: flex;
+}
+
+
+/*----------Terceiro Bloco----------*/
+
+
+.searchBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    background-image: url(../../assets/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    .subTitleSearch {
+        margin: 80px 0 0 0;
+        font-family: "Chakra Petch";
+        font-size: 14px;
+        font-weight: 700;
+        color: #F19500;
+    }
+
+    .titleSearch {
+        margin: 15px 0 0 0;
+        font-family: "Chakra Petch";
+        font-size: 60px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .search-bar {
+
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .searchInput {
+            margin: 200px 0 0 0;
+            padding: 18px;
+            font-size: 23px;
+            width: 974px;
+            border: 1px solid #000000;
+            border-radius: 15px 15px 15px 15px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #323232;
+            font-family: "Chakra Petch";
+        }
+
+        .search {
+
+            margin: 24px 0 0 0;
+
+            font-family: "Chakra Petch";
+            font-size: 14px;
+            font-weight: 700;
+            background-color: #F19500;
+            color: #000000;
+            width: 140px;
+            height: 44px;
+
+        }
+    }
+
+ 
 }

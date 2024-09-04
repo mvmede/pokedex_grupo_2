@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <script src="../script/index.js"></script>
-    <link rel="stylesheet" href="../CSS/headerandfooter.css">
-    <link rel="stylesheet" href="../CSS/contentsearch.css">
+    <link rel="stylesheet" href="../css/headerandfooter.css">
+    <link rel="stylesheet" href="../css/contentsearch.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-       </style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+    </style>
 </head>
 
 <body>
@@ -21,14 +22,14 @@
             <div class="logoHeader">
                 <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex"></a>
             </div>
-            <div class="linksHeader">
+            <nav class="linksHeader">
                 <ul>
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="">Pesquisar</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/search.html" class="active">Pesquisar</a></li>
+                    <li><a href="../html/aboutus.html">Sobre nós</a></li>
+                    <li><a href="../html/contact.html">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 
@@ -46,49 +47,81 @@
         </div>
 
         <!---------CONTEUDO--------->
-        <Section class="ResultPesquisa">
-           <ul>
-                <strong><li>Resultados da Pesquisa:</li></strong><br>
-            </ul> 
+        <div class="search-results">
+            <strong>Resultados de pesquisa:</strong> 5 Cartas
+        </div>
         
-        </Section>
 
-        <article class="conteudoCards">
+         <!-- CARDS -->
 
-            <h3>Mew</h3>
-            <div class="imgmew" ><img src="../assets/Mew.png" alt="cards"></div>
-            <p class="text">Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p><br> 
-            <button class="verCarta">VER CARTA</button>
+        <div class="card-container">
+            <div class="card-image">
+                <img src="/assets/Mew.png" alt="Imagem da Carta">
+            </div>
+            <div class="card-details">
+                <h2>Mew</h2>
+                <p><strong>Tipo:</strong> Psíquico</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn">VER CARTA</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-image">
+                <img src="/assets/Mew.png" alt="Imagem da Carta">
+            </div>
+            <div class="card-details">
+                <h2>Mew</h2>
+                <p><strong>Tipo:</strong> Psíquico</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn">VER CARTA</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-image">
+                <img src="/assets/Mew.png" alt="Imagem da Carta">
+            </div>
+            <div class="card-details">
+                <h2>Mew</h2>
+                <p><strong>Tipo:</strong> Psíquico</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn">VER CARTA</a>
+            </div>
+        </div>
 
-        </article>
+        <div class="card-container">
+            <div class="card-image">
+                <img src="/assets/Mew.png" alt="Imagem da Carta">
+            </div>
+            <div class="card-details">
+                <h2>Mew</h2>
+                <p><strong>Tipo:</strong> Psíquico</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn">VER CARTA</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-image">
+                <img src="/assets/Mew.png" alt="Imagem da Carta">
+            </div>
+            <div class="card-details">
+                <h2>Mew</h2>
+                <p><strong>Tipo:</strong> Psíquico</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn">VER CARTA</a>
+            </div>
+        </div>
 
-
-        <article class="conteudoCards">
-
-            <h3>Mew</h3>
-            <img src="../assets/Mew.png" alt="cards">
-            <p class="text">Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p><br> 
-            <button class="verCarta">VER CARTA</button>
-
-        </article>
-
-        <article class="conteudoCards">
-
-            <h3>Mew</h3>
-            <img src="../assets/Mew.png" alt="cards">
-            <p class="text">Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p><br> 
-            <button class="verCarta">VER CARTA</button>
-
-        </article>
-
-        <article class="conteudoCards">
-
-            <h3>Mew</h3>
-            <img src="../assets/Mew.png" alt="cards">
-            <p class="text">Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p><br> 
-            <button class="verCarta">VER CARTA</button>
-
-        </article>
+        <!--Barra-->
 
         <div class="pagination">
             <a href="#" class="btn previous">Anterior</a>

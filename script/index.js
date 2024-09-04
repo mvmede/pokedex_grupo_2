@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*const pokedex = [
+=======
+/* const pokedex = [
+>>>>>>> 3e1b88b70cfda495e3f02229d580e3c1684f5e8f
     {name: "Bulbasaur", category: "Seed", abilities: "Overgrow", type: "Grama / Veneno"},
     {name: "Charmander", category: "Lizard", abilities: "Blaze", type: "Fogo"},
     {name: "Squirtle", category: "Tiny Turtle", abilities: "Torrent", type: "Água"},
@@ -49,4 +53,4 @@ function main() {
     }
 }
 
-main();
+main(); */

@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    <script src="./script/index.js"></script>
-    <link rel="stylesheet" href="./CSS/headerandfooter.css">
-    <link rel="stylesheet" href="./CSS/contentaboutus.css">
+    <script src="../script/index.js"></script>
+    <link rel="stylesheet" href="../css/headerandfooter.css">
+    <link rel="stylesheet" href="../css/contentaboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
     </style>
 </head>
 
@@ -19,21 +21,69 @@
     <header>
         <div class="headerContainer">
             <div class="logoHeader">
-                <a href="/index.html"><img src="./assets/Logo.png" alt="Pokedex"></a>
+                <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex"></a>
             </div>
-            <div class="linksHeader">
+            <nav class="linksHeader">
                 <ul>
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="">Pesquisar</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/search.html">Pesquisar</a></li>
+                    <li><a href="../html/aboutus.html" class="active">Sobre nós</a></li>
+                    <li><a href="../html/contact.html">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 
     <!----------CONTENT---------->
 
+    <main class="aboutUs">
+        <div class="aboutUsTitle">
+            <div class="squareEmpty"></div>
+            <div class="squareFilled"></div>
+            <div class="line"></div>
+            <h1>Sobre nós</h1>
+            <div class="line"></div>
+            <div class="squareFilled"></div>
+            <div class="squareEmpty"></div>
+        </div>
+        <div class="aboutLogo">
+            <img src="../assets/logo sobrenos.png" alt="Pokedex">
+        </div>
+        <h4 class="descriptionAboutUs"> Pokedex é um site desenvolvido em 2024 como parte de um projeto final de curso da Coderhouse. Inspirado no universo Pokémon,
+            a plataforma permite que os usuários explorem uma vasta coleção de Pokémon, visualizando detalhadamente seus atributos e
+            habilidades. Cada Pokémon possui sua própria carta individual, oferecendo uma experiência imersiva e informativa para os fãs. Criado
+            com dedicação, o site é uma ferramenta única e educativa, projetada para capturar a essência do mundo Pokémon. </h4>
+        <div class="giphy">
+            <img src="../assets/gengar.gif" alt="Pokedex">
+        </div>
+    </main>
+
+
+    <!----------FOOTER---------->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../assets/logo sobrenos.png" alt="Pokedex">
+                <p class="footer-description">
+                    Pokédex desenvolvida para todas as pessoas que desejam explorar o mundo dos Pokémon.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Comparar</a></li>
+                    <li><a href="../html/contact.html">Contato</a></li>
+                    <li><a href="../html/search.html">Pesquisar</a></li>
+                    <li><a href="../html/aboutus.html">Sobre nós</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-bottom">
+            <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
+        </div>
+    </footer>
 
 </body>
 
