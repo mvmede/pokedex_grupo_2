@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
-    <link rel="stylesheet" href="../css/headerandfooter.css">
-    <link rel="stylesheet" href="../css/contentsearch.css">
+    <link rel="stylesheet" href="../css/headerandfooter.css" />
+    <link rel="stylesheet" href="../css/contentsearch.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
     </style>
     <script type="text/javascript" src="../script/API.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
 
     <!----------Header---------->
     <header>
-        <div class="headerContainer">
-            <div class="logoHeader">
-                <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex"></a>
-            </div>
-            <nav class="linksHeader">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../html/search.html" class="active">Pesquisar</a></li>
-                    <li><a href="../html/aboutus.html">Sobre nós</a></li>
-                    <li><a href="../html/contact.html">Contato</a></li>
-                </ul>
-            </nav>
+      <div class="headerContainer">
+        <div class="logoHeader">
+          <a href="../index.html"
+            ><img src="../assets/Logo.png" alt="Pokedex"
+          /></a>
         </div>
+        <nav class="linksHeader">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/search.html" class="active">Pesquisar</a></li>
+            <li><a href="../html/aboutus.html">Sobre nós</a></li>
+            <li><a href="../html/contact.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!----------Bloco de Pesquisa---------->
     <div id="searchBlock" class="searchBlock">
-        <p class="subTitleSearch">------ ÁREA POKEMON ------ </p>
-        <h1 class="titleSearch">PESQUISAR POKEMON</h1>
-        <div class="search-bar">
-            <form action="#" id="searchForm" method="GET">
-                <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..."
-                    name="query">
-            </form>
-            <button class="search" id="search">PESQUISAR</button>
-        </div>
+      <p class="subTitleSearch">------ ÁREA POKEMON ------</p>
+      <h1 class="titleSearch">PESQUISAR POKEMON</h1>
+      <div class="search-bar">
+        <form action="#" id="searchForm" method="GET">
+          <input
+            class="searchInput"
+            id="searchInput"
+            type="text"
+            placeholder="Digite o nome do seu Pokémon..."
+            name="query"
+          />
+        </form>
+        <button class="search" id="search">PESQUISAR</button>
+      </div>
     </div>
 
     <!---------Resultado da Pesquisa--------->
@@ -52,43 +57,34 @@
     <!-- CARDS -->
     <div id="cardsResults"></div>
 
-    <!--Barra-->
-
-    <div class="pagination">
-        <a href="#" class="btn previous">Anterior</a>
-        <a href="#" class="btn active">1</a>
-        <a href="#" class="btn">2</a>
-        <span class="dots">...</span>
-        <a href="#" class="btn">5</a>
-        <a href="#" class="btn next">Próxima</a>
-    </div>
+    <!-- PAGINATION -->
+    <div id="pagination" class="pagination"></div>
 
     <!--FOOTER-->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="../assets/logo sobrenos.png" alt="Pokedex">
-                <p class="footer-description">
-                    Pokédex desenvolvida para todas as pessoas que desejam explorar o mundo dos Pokémon.
-                </p>
-            </div>
-            <div class="footer-links">
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Comparar</a></li>
-                    <li><a href="../html/contact.html">Contato</a></li>
-                    <li><a href="../html/search.html">Pesquisar</a></li>
-                    <li><a href="../html/aboutus.html">Sobre nós</a></li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../assets/logo sobrenos.png" alt="Pokedex" />
+          <p class="footer-description">
+            Pokédex desenvolvida para todas as pessoas que desejam explorar o
+            mundo dos Pokémon.
+          </p>
         </div>
-        <div class="footer-line"></div>
-        <div class="footer-bottom">
-            <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
+        <div class="footer-links">
+          <h2>Links</h2>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Comparar</a></li>
+            <li><a href="../html/contact.html">Contato</a></li>
+            <li><a href="../html/search.html">Pesquisar</a></li>
+            <li><a href="../html/aboutus.html">Sobre nós</a></li>
+          </ul>
         </div>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-bottom">
+        <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

@@ -4,7 +4,7 @@ function goToSearch() {
     const searchValueEncoded = encodeURIComponent(searchValue)
     window.location.href = "/html/search.html?q=" + searchValueEncoded
 
-}
+};
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,4 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
     botao.addEventListener("click", () => {
         goToSearch()
     })
-})
+});
