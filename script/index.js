@@ -2,7 +2,7 @@ function goToSearch() {
 
     const searchValue = document.getElementById("searchInput").value
     const searchValueEncoded = encodeURIComponent(searchValue)
-    window.location.href = "/html/search.html?q=" + searchValueEncoded
+    window.location.href = "./html/search.html?q=" + searchValueEncoded
 
 };
 
