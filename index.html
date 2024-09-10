@@ -11,12 +11,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
     </style>
-    <script type="text/javascript" src="./script/API.js"></script>
+    <script type="text/javascript" src="./script/index.js"></script>
 </head>
 
 <body>
 
     <!----------HEADER---------->
+
     <header>
         <div class="headerContainer">
             <div class="logoHeader">
@@ -33,7 +34,8 @@
         </div>
     </header>
 
-    <!----------CONTENT---------->
+    <!----------Bloco 1---------->
+
     <div class="firstBlock">
         <div class="textsFirstBlock">
             <div class="subTitle">POKEDEX</div>
@@ -41,8 +43,9 @@
             <div class="description">Use a pesquisa avançada para explorar o mundo de Pokémon</div>
             <a href="./html/aboutus.html"><button class="aboutus">SOBRE NÓS</button></a>
         </div>
-        
     </div>
+
+    <!----------Bloco 2---------->
 
     <div class="secondBlock">
         <div class="cardsSecondBlock"><img src="./assets/ashcards.png"></div>
@@ -54,19 +57,19 @@
         </div>
     </div>
 
-    <div id="searchBlock" class="searchBlock">
+    <!----------Bloco de Pesquisa---------->
 
+    <div id="searchBlock" class="searchBlock">
         <p class="subTitleSearch">------ ÁREA POKEMON ------ </p>
         <h1 class="titleSearch">PESQUISAR POKEMON</h1>
         <div class="search-bar">
-            <form action="#" method="GET">
-                <input class="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..." name="query">
+            <form action="#" id="searchForm" method="GET">
+                <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..."
+                    name="query">
             </form>
             <button class="search" id="search">PESQUISAR</button>
         </div>
-
     </div>
-
 
     <!----------FOOTER---------->
     <footer>
@@ -93,7 +96,6 @@
             <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
         </div>
     </footer>
-
 </body>
 
 </html>

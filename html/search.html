@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    <script src="../script/index.js"></script>
     <link rel="stylesheet" href="../css/headerandfooter.css">
     <link rel="stylesheet" href="../css/contentsearch.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
     </style>
+    <script type="text/javascript" src="../script/API.js"></script>
 </head>
 
 <body>
 
-    <!----------HEADER---------->
+    <!----------Header---------->
     <header>
         <div class="headerContainer">
             <div class="logoHeader">
@@ -33,107 +33,37 @@
         </div>
     </header>
 
-    <!----------CONTENT---------->
+    <!----------Bloco de Pesquisa---------->
     <div id="searchBlock" class="searchBlock">
-
         <p class="subTitleSearch">------ ÁREA POKEMON ------ </p>
         <h1 class="titleSearch">PESQUISAR POKEMON</h1>
         <div class="search-bar">
-            <form action="#" method="GET">
-                <input class="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..." name="query">
+            <form action="#" id="searchForm" method="GET">
+                <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..."
+                    name="query">
             </form>
             <button class="search" id="search">PESQUISAR</button>
         </div>
-
     </div>
 
-        <!---------CONTEUDO--------->
-        <div class="search-results">
-            <strong>Resultados de pesquisa:</strong> 5 Cartas
-        </div>
-        
+    <!---------Resultado da Pesquisa--------->
+    <div class="search-results" id="searchResults"></div>
 
-         <!-- CARDS -->
+    <!-- CARDS -->
+    <div id="cardsResults"></div>
 
-        <div class="card-container">
-            <div class="card-image">
-                <img src="../assets/Mew.png" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>Mew</h2>
-                <p><strong>Tipo:</strong> Psíquico</p>
-                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn">VER CARTA</a>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card-image">
-                <img src="../assets/Mew.png" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>Mew</h2>
-                <p><strong>Tipo:</strong> Psíquico</p>
-                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn">VER CARTA</a>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card-image">
-                <img src="../assets/Mew.png" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>Mew</h2>
-                <p><strong>Tipo:</strong> Psíquico</p>
-                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn">VER CARTA</a>
-            </div>
-        </div>
+    <!--Barra-->
 
-        <div class="card-container">
-            <div class="card-image">
-                <img src="../assets/Mew.png" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>Mew</h2>
-                <p><strong>Tipo:</strong> Psíquico</p>
-                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn">VER CARTA</a>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card-image">
-                <img src="../assets/Mew.png" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>Mew</h2>
-                <p><strong>Tipo:</strong> Psíquico</p>
-                <p>Lorem ipsum dolor sit amet consectetur. Nisl egestas tempus purus netus amet in euismod non. Auctor suspendisse amet maecenas ut pharetra a a. Ligula et cursus quis in praesent quam neque. Platea sed vitae vulputate viverra ac morbi. Molestie dictum est malesuada in dolor. Natoque morbi sed eget et nulla senectus pellentesque.</p>
-            </div>
-            <div class="card-action">
-                <a href="#" class="btn">VER CARTA</a>
-            </div>
-        </div>
+    <div class="pagination">
+        <a href="#" class="btn previous">Anterior</a>
+        <a href="#" class="btn active">1</a>
+        <a href="#" class="btn">2</a>
+        <span class="dots">...</span>
+        <a href="#" class="btn">5</a>
+        <a href="#" class="btn next">Próxima</a>
+    </div>
 
-        <!--Barra-->
-
-        <div class="pagination">
-            <a href="#" class="btn previous">Anterior</a>
-            <a href="#" class="btn active">1</a>
-            <a href="#" class="btn">2</a>
-            <span class="dots">...</span>
-            <a href="#" class="btn">5</a>
-            <a href="#" class="btn next">Próxima</a>
-        </div>
-        
-                        <!--FOOTER-->
+    <!--FOOTER-->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -141,15 +71,15 @@
                 <p class="footer-description">
                     Pokédex desenvolvida para todas as pessoas que desejam explorar o mundo dos Pokémon.
                 </p>
-                </div>
-                <div class="footer-links">
+            </div>
+            <div class="footer-links">
                 <h2>Links</h2>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Comparar</a></li>                   
+                    <li><a href="#">Comparar</a></li>
                     <li><a href="../html/contact.html">Contato</a></li>
                     <li><a href="../html/search.html">Pesquisar</a></li>
-                    <li><a href="../html/aboutus.html">Sobre nós</a></li>                    
+                    <li><a href="../html/aboutus.html">Sobre nós</a></li>
                 </ul>
             </div>
         </div>
