@@ -90,9 +90,9 @@ function createPagination(totalPages) {
 
     let startPage = Math.max(2, currentPage - 1);
     let endPage = Math.min(totalPages - 1, currentPage + 1);
-// adiciona o botão da página "1"
+    // adiciona o botão da página "1"
     addPageButton(1);
-// adiciona os "pontinhos" da paginação
+    // adiciona os "pontinhos" da paginação
     if (startPage > 2) {
         addDots();
     }
@@ -109,14 +109,14 @@ function createPagination(totalPages) {
     if (totalPages > 1) {
         addPageButton(totalPages);
     }
-//botão de avançar
+    //botão de avançar
     const nextButton = document.createElement("button");
     nextButton.innerText = "Next";
     nextButton.className = "btn next";
     nextButton.disabled = currentPage === totalPages;
     nextButton.onclick = () => changePage(currentPage + 1);
     paginationDiv.appendChild(nextButton);
-//função que adiciona os botões das páginas
+    //função que adiciona os botões das páginas
     function addPageButton(pageNumber) {
         const pageButton = document.createElement("button");
         pageButton.innerText = pageNumber;
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         getCards(urlParameter.get("q"), currentPage);
     }
 
-// Aqui ele dispara a função de pesquisa pelos cards caso o usuário de "Enter" no formulário ou clique no botão de pesquisa
+    // Aqui ele dispara a função de pesquisa pelos cards caso o usuário de "Enter" no formulário ou clique no botão de pesquisa
     const form = document.getElementById("searchForm");
     form.addEventListener("submit", (event) => {
         event.preventDefault();
