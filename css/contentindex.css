@@ -114,10 +114,6 @@ body {
     height: 460px;
     padding: 0 0 0 64px;
     display: flex;
-
-    img {
-        width: 200px;
-    }
 }
 
 

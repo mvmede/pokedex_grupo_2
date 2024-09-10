@@ -1,6 +1,10 @@
+
+// Define a página atual que o valor inicial é 1 e a quantidade de itens (pokemons) por página
 let currentPage = 1;
 const pageSize = 10;
 
+
+// Aqui é uma função que busca o card na API de acordo com o que for preenchido no input com a página que o usuário selecionou
 function getCards(searchValue, page = 1) {
     if (!searchValue) {
         searchValue = document.getElementById("searchInput").value;
@@ -8,6 +12,7 @@ function getCards(searchValue, page = 1) {
 
     const searchValueEncoded = encodeURIComponent("name:" + searchValue);
 
+    // Requisição para API
     fetch(
         `https://api.pokemontcg.io/v2/cards?q=${searchValueEncoded}&page=${page}&pageSize=${pageSize}`,
         {
@@ -17,6 +22,8 @@ function getCards(searchValue, page = 1) {
             },
         }
     )
+
+        // Após a requisição ser executa, verifica se a resposta esta ok. Caso ele esteja ok, ele retornará um json, se não ele dará um erro.
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Erro na requisição: " + response.statusText);
@@ -26,24 +33,24 @@ function getCards(searchValue, page = 1) {
         .then((data) => {
             const cards = data.data;
             const totalPages = Math.ceil(data.totalCount / pageSize);
-
-            // Clear previous results and pagination
             document.getElementById("cardsResults").innerHTML = "";
             document.getElementById("searchResults").innerHTML = `
             <strong>Resultados de pesquisa:</strong> ${data.totalCount} Cartas
         `;
 
-            // Display the cards
+
+
             cards.forEach((element) => {
                 let attacks = "";
                 if (element.attacks) {
+                    // Alguns pokemons possuíam mais de 1 ataque, então criamos esse forEach para retornar todos os ataques.
                     element.attacks.forEach((attack) => {
                         attacks += `
               <p><b>${attack.name}:</b> ${attack.text || "N/A"}</p>
             `;
                     });
                 }
-
+                // Após receber o retorno da API fazemos a adição do conteúdo dos cards dinamicamente
                 document.getElementById("cardsResults").innerHTML += `
             <div class="card-container">
                 <div class="card-image">
@@ -61,8 +68,7 @@ function getCards(searchValue, page = 1) {
             <hr class="divisor">
         `;
             });
-
-            // Create pagination
+            // Cria a paginação da busca realizada
             createPagination(totalPages);
         })
         .catch((error) => {
@@ -74,7 +80,7 @@ function createPagination(totalPages) {
     const paginationDiv = document.getElementById("pagination");
     paginationDiv.innerHTML = "";
 
-    // Previous Button
+    //botão de voltar
     const prevButton = document.createElement("button");
     prevButton.innerText = "Anterior";
     prevButton.className = "btn previous";
@@ -82,12 +88,11 @@ function createPagination(totalPages) {
     prevButton.onclick = () => changePage(currentPage - 1);
     paginationDiv.appendChild(prevButton);
 
-    const maxVisiblePages = 5;
     let startPage = Math.max(2, currentPage - 1);
     let endPage = Math.min(totalPages - 1, currentPage + 1);
-
+// adiciona o botão da página "1"
     addPageButton(1);
-
+// adiciona os "pontinhos" da paginação
     if (startPage > 2) {
         addDots();
     }
@@ -100,17 +105,18 @@ function createPagination(totalPages) {
         addDots();
     }
 
+
     if (totalPages > 1) {
         addPageButton(totalPages);
     }
-
+//botão de avançar
     const nextButton = document.createElement("button");
     nextButton.innerText = "Next";
     nextButton.className = "btn next";
     nextButton.disabled = currentPage === totalPages;
     nextButton.onclick = () => changePage(currentPage + 1);
     paginationDiv.appendChild(nextButton);
-
+//função que adiciona os botões das páginas
     function addPageButton(pageNumber) {
         const pageButton = document.createElement("button");
         pageButton.innerText = pageNumber;
@@ -120,6 +126,7 @@ function createPagination(totalPages) {
         paginationDiv.appendChild(pageButton);
     }
 
+    //função que adiciona os três "pontinhos"
     function addDots() {
         const dots = document.createElement("span");
         dots.innerText = "...";
@@ -128,9 +135,11 @@ function createPagination(totalPages) {
     }
 }
 
+//função que muda a página para a página que o usuário selecionou
 function changePage(page) {
     currentPage = page;
     getCards(document.getElementById("searchInput").value, currentPage);
+    //faz o scroll para o começo dos resultados, para o usuário não ter que ficar subindo manualmente
     document.getElementById("searchResults").scrollIntoView({
 
         behavior: "smooth"
@@ -138,12 +147,16 @@ function changePage(page) {
     });
 }
 
+// adiciona um EventListener para quando a página carregar completamente
 document.addEventListener("DOMContentLoaded", () => {
+    // faz a pesquisa automaticamente caso o exista o parametro na url do pokemon a ser pesquisado
+
     const urlParameter = new URLSearchParams(window.location.search);
     if (urlParameter.get("q")) {
         getCards(urlParameter.get("q"), currentPage);
     }
 
+// Aqui ele dispara a função de pesquisa pelos cards caso o usuário de "Enter" no formulário ou clique no botão de pesquisa
     const form = document.getElementById("searchForm");
     form.addEventListener("submit", (event) => {
         event.preventDefault();
