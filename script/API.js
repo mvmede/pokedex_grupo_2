@@ -1,8 +1,6 @@
-
 // Define a página atual que o valor inicial é 1 e a quantidade de itens (pokemons) por página
 let currentPage = 1;
 const pageSize = 10;
-
 
 // Aqui é uma função que busca o card na API de acordo com o que for preenchido no input com a página que o usuário selecionou
 function getCards(searchValue, page = 1) {
@@ -38,11 +36,10 @@ function getCards(searchValue, page = 1) {
             <strong>Resultados de pesquisa:</strong> ${data.totalCount} Cartas
         `;
 
-
-
             cards.forEach((element) => {
                 let attacks = "";
                 if (element.attacks) {
+
                     // Alguns pokemons possuíam mais de 1 ataque, então criamos esse forEach para retornar todos os ataques.
                     element.attacks.forEach((attack) => {
                         attacks += `
@@ -50,6 +47,7 @@ function getCards(searchValue, page = 1) {
             `;
                     });
                 }
+
                 // Após receber o retorno da API fazemos a adição do conteúdo dos cards dinamicamente
                 document.getElementById("cardsResults").innerHTML += `
             <div class="card-container">
@@ -68,6 +66,7 @@ function getCards(searchValue, page = 1) {
             <hr class="divisor">
         `;
             });
+
             // Cria a paginação da busca realizada
             createPagination(totalPages);
         })
@@ -90,8 +89,10 @@ function createPagination(totalPages) {
 
     let startPage = Math.max(2, currentPage - 1);
     let endPage = Math.min(totalPages - 1, currentPage + 1);
+
     // adiciona o botão da página "1"
     addPageButton(1);
+
     // adiciona os "pontinhos" da paginação
     if (startPage > 2) {
         addDots();
@@ -105,17 +106,18 @@ function createPagination(totalPages) {
         addDots();
     }
 
-
     if (totalPages > 1) {
         addPageButton(totalPages);
     }
+
     //botão de avançar
     const nextButton = document.createElement("button");
-    nextButton.innerText = "Next";
+    nextButton.innerText = "Avançar";
     nextButton.className = "btn next";
     nextButton.disabled = currentPage === totalPages;
     nextButton.onclick = () => changePage(currentPage + 1);
     paginationDiv.appendChild(nextButton);
+
     //função que adiciona os botões das páginas
     function addPageButton(pageNumber) {
         const pageButton = document.createElement("button");
@@ -139,18 +141,17 @@ function createPagination(totalPages) {
 function changePage(page) {
     currentPage = page;
     getCards(document.getElementById("searchInput").value, currentPage);
+
     //faz o scroll para o começo dos resultados, para o usuário não ter que ficar subindo manualmente
     document.getElementById("searchResults").scrollIntoView({
-
         behavior: "smooth"
-
     });
 }
 
 // adiciona um EventListener para quando a página carregar completamente
 document.addEventListener("DOMContentLoaded", () => {
-    // faz a pesquisa automaticamente caso o exista o parametro na url do pokemon a ser pesquisado
 
+    // faz a pesquisa automaticamente caso o exista o parametro na url do pokemon a ser pesquisado
     const urlParameter = new URLSearchParams(window.location.search);
     if (urlParameter.get("q")) {
         getCards(urlParameter.get("q"), currentPage);
