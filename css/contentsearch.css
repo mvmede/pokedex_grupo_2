@@ -110,6 +110,41 @@ body {
     font-size: 28px;
     color: #F19500;
 }
+.specs {
+
+display: flex;
+margin: 0 20px 0 0;
+
+}
+.typeClass {
+    background-color: #6300b4;
+    height: auto;
+    width:160px;
+    border-radius: 10px 10px;
+    padding: 4px 4px 4px 8px;
+    color: #ffffff;
+    margin: 0 20px 20px 0;
+}
+
+.level {
+    background-color: #0076a5;
+    height: auto;
+    width:90px;
+    border-radius: 10px 10px;
+    padding: 4px 4px 4px 8px;
+    color: #ffffff;
+    margin: 0 0px 20px 0;
+}
+
+.hp {
+    background-color: #0a8f0f;
+    height: auto;
+    width:80px;
+    border-radius: 10px 10px;
+    padding: 4px 4px 4px 8px;
+    color: #ffffff;
+    margin: 0 20px 20px 0;
+}
 
 .card-details p {
     font-size: 16px;

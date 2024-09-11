@@ -56,7 +56,11 @@ function getCards(searchValue, page = 1) {
                 </div>
                 <div class="card-details">
                     <h2>${element.name}</h2>
-                    <p><strong>Tipo:</strong> ${element.types ? element.types[0] : "N/A"}</p>
+                    <div class="specs" id="specs">
+                        <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
+                        <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
+                        <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "1"} </p></div>
+                    </div>
                     ${attacks}
                 </div>
                 <div class="card-action">
