@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokédex</title>
-    <link rel="stylesheet" href="../css/headerandfooter.css" />
-    <link rel="stylesheet" href="../css/contentsearch.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
-    </style>
-    <script type="text/javascript" src="../script/API.js"></script>
-  </head>
-  <body>
 
-    <!----------Header---------->
-    <header>
-      <div class="headerContainer">
-        <div class="logoHeader">
-          <a href="../index.html"
-            ><img src="../assets/Logo.png" alt="Pokedex"
-          /></a>
-        </div>
-        <nav class="linksHeader">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../html/search.html" class="active">Pesquisar</a></li>
-            <li><a href="../html/aboutus.html">Sobre nós</a></li>
-            <li><a href="../html/contact.html">Contato</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="../css/headerandfooter.css" />
+  <link rel="stylesheet" href="../css/contentsearch.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+  </style>
+  <script type="text/javascript" src="../script/API.js"></script>
+</head>
+
+<body>
+
+  <!----------Header---------->
+  <header>
+    <div class="headerContainer">
+      <div class="logoHeader">
+        <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex" /></a>
       </div>
-    </header>
+      <nav class="linksHeader">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../html/search.html" class="active">Pesquisar</a></li>
+          <li><a href="../html/aboutus.html">Sobre nós</a></li>
+          <li><a href="../html/contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!----------Bloco de Pesquisa---------->
-    <div id="searchBlock" class="searchBlock">
-      <p class="subTitleSearch">------ ÁREA POKEMON ------</p>
-      <h1 class="titleSearch">PESQUISAR POKEMON</h1>
-      <div class="search-bar">
-        <form action="#" id="searchForm" method="GET">
-          <input
-            class="searchInput"
-            id="searchInput"
-            type="text"
-            placeholder="Digite o nome do seu Pokémon..."
-            name="query"
-          />
-        </form>
-        <button class="search" id="search">PESQUISAR</button>
+  <!----------Bloco de Pesquisa---------->
+  <div id="searchBlock" class="searchBlock">
+    <p class="subTitleSearch">------ ÁREA POKEMON ------</p>
+    <h1 class="titleSearch">PESQUISAR POKEMON</h1>
+    <div class="search-bar">
+      <form action="#" id="searchForm" method="GET">
+        <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..."
+          name="query" />
+      </form>
+      <button class="search" id="search">PESQUISAR</button>
+    </div>
+  </div>
+
+  <!---------Resultado da Pesquisa--------->
+  <div class="search-results" id="searchResults"></div>
+
+  <!-- CARDS -->
+  <div id="cardsResults"></div>
+
+  <div id="modalCard" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgCardLarge">
+    <div id="caption"></div>
+    <button id="closeModalButton">Voltar para pesquisa</button>
+  </div>
+
+  <!-- PAGINATION -->
+  <div id="pagination" class="pagination"></div>
+
+  <!--FOOTER-->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="../assets/logo sobrenos.png" alt="Pokedex" />
+        <p class="footer-description">
+          Pokédex desenvolvida para todas as pessoas que desejam explorar o
+          mundo dos Pokémon.
+        </p>
+      </div>
+      <div class="footer-links">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Comparar</a></li>
+          <li><a href="../html/contact.html">Contato</a></li>
+          <li><a href="../html/search.html">Pesquisar</a></li>
+          <li><a href="../html/aboutus.html">Sobre nós</a></li>
+        </ul>
       </div>
     </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
+    </div>
+  </footer>
+</body>
 
-    <!---------Resultado da Pesquisa--------->
-    <div class="search-results" id="searchResults"></div>
-
-    <!-- CARDS -->
-    <div id="cardsResults"></div>
-
-    <!-- PAGINATION -->
-    <div id="pagination" class="pagination"></div>
-
-    <!--FOOTER-->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="../assets/logo sobrenos.png" alt="Pokedex" />
-          <p class="footer-description">
-            Pokédex desenvolvida para todas as pessoas que desejam explorar o
-            mundo dos Pokémon.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h2>Links</h2>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Comparar</a></li>
-            <li><a href="../html/contact.html">Contato</a></li>
-            <li><a href="../html/search.html">Pesquisar</a></li>
-            <li><a href="../html/aboutus.html">Sobre nós</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-line"></div>
-      <div class="footer-bottom">
-        <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
-      </div>
-    </footer>
-  </body>
 </html>

@@ -42,33 +42,64 @@ function getCards(searchValue, page = 1) {
 
                     // Alguns pokemons possuíam mais de 1 ataque, então criamos esse forEach para retornar todos os ataques.
                     element.attacks.forEach((attack) => {
-                        attacks += `
-              <p><b>${attack.name}:</b> ${attack.text || "N/A"}</p>
-            `;
+                        attacks += `<p><b>${attack.name}:</b> ${attack.text || "N/A"}</p>`;
                     });
                 }
 
                 // Após receber o retorno da API fazemos a adição do conteúdo dos cards dinamicamente
                 document.getElementById("cardsResults").innerHTML += `
-            <div class="card-container">
-                <div class="card-image">
-                    <img src="${element.images.small}" alt="Imagem da Carta">
-                </div>
-                <div class="card-details">
-                    <h2>${element.name}</h2>
-                    <div class="specs" id="specs">
-                        <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
-                        <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
-                        <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "1"} </p></div>
-                    </div>
-                    ${attacks}
-                </div>
-                <div class="card-action">
-                    <a href="#" class="btn">VER CARTA</a>
-                </div>
+      <div class="card-container">
+            <div class="card-image">
+                <img src="${element.images.small}" alt="Imagem da Carta">
             </div>
-            <hr class="divisor">
-        `;
+            <div class="card-details">
+                <h2>${element.name}</h2>
+                <div class="specs" id="specs">
+                    <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
+                    <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
+                    <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "1"} </p></div>
+                </div>
+                ${attacks}
+            </div>
+            <div class="card-action">
+                <a href="#" class="buttonShowCard" data-large-image="${element.images.large}">VER CARTA</a>
+            </div>
+        </div>
+        <hr class="divisor">
+    `;
+
+                document.querySelectorAll('.buttonShowCard').forEach(button => {
+                    button.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        const largeImageUrl = this.getAttribute('data-large-image');
+
+                        // Para exibir a imagem no modal
+                        const modal = document.getElementById("modalCard");
+                        const modalImg = document.getElementById("imgCardLarge");
+                        modal.style.display = "flex";
+                        modalImg.src = largeImageUrl;
+
+                        // Botão para fechar o modal ao clicar no "x" ou no botão "Voltar para pesquisa"
+                        const closeModal = document.getElementsByClassName("close")[0];
+                        const closeButton = document.getElementById("closeModalButton");
+
+                        closeModal.onclick = function () {
+                            modal.style.display = "none";
+                        }
+
+                        closeButton.onclick = function () {
+                            modal.style.display = "none";
+                        }
+
+                        // Botão para fechar o modal ao clicar fora da imagem
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    });
+                });
+
             });
 
             // Cria a paginação da busca realizada
