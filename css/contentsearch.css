@@ -199,3 +199,147 @@ margin: 0 20px 0 0;
     padding: 10px 15px;
     color: #4A4A4A;
 }
+/* Base */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos padrão (Desktop) */
+.searchBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    background-image: url(../assets/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.subTitleSearch {
+    margin: 80px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 700;
+    color: #F19500;
+}
+
+.titleSearch {
+    margin: 15px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchInput {
+    margin: 200px 0 0 0;
+    padding: 18px;
+    font-size: 23px;
+    width: 974px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #323232;
+    font-family: "Chakra Petch";
+}
+
+.search {
+    margin: 24px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
+    width: 140px;
+    height: 44px;
+}
+
+/* Responsividade para Tablets  */
+@media (max-width: 1024px) {
+    .searchInput {
+        width: 100vw;
+        font-size: 20px;
+    }
+
+    .titleSearch {
+        font-size: 45px;
+    }
+
+    .search {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-details p {
+        width: 80vw;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .searchInput {
+        width: 90vw;
+        font-size: 18px;
+        margin-top: 100px;
+    }
+
+    .titleSearch {
+        font-size: 35px;
+    }
+
+    .search {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-image img {
+        max-width: 100%;
+    }
+
+    .card-details p {
+        width: 90vw;
+        font-size: 14px;
+    }
+
+    .specs {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .typeClass, .level, .hp {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+
+    .pagination {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 5px; 
+    }
+}
+
