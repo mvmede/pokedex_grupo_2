@@ -13,6 +13,7 @@ body {
     height: 600px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .textsFirstBlock {
@@ -24,40 +25,39 @@ body {
 }
 
 .subTitle {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #F19500;
+    text-align: left;
 }
 
 .title {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #ffffff;
-    width: 600px;
     text-align: left;
 }
 
 .description {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 16px;
     color: #ffffff;
-    width: 600px;
     text-align: left;
 }
 
 .searchFirstBlock {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: 700;
     background-color: #F19500;
     color: #000000;
     width: 140px;
     height: 44px;
+    border: 1px solid #000000;
+    cursor: pointer;
 }
-
-
 
 /*----------Segundo Bloco----------*/
 
@@ -70,116 +70,249 @@ body {
     height: 460px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.cardsSecondBlock {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsSecondBlock img {
+    max-width: auto;
+    height: 100%;
 }
 
 .textsSecondBlock {
-    width: 600px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: end;
-    padding: 60px 64px 60px 0;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .subTitleSecondBlock {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #F19500;
 }
 
 .titleSecondBlock {
-    font-family: "Chakra Petch";
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #000000;
-    width: 600px;
-    text-align: right;
-
 }
 
-.textsSecondBlock button {
-    font-family: "Chakra Petch";
+.aboutus {
     font-size: 14px;
     font-weight: 700;
     background-color: #F19500;
     color: #000000;
     width: 140px;
     height: 44px;
+    border: 1px solid #000000;
+    cursor: pointer;
 }
-
-
-.cardsSecondBlock {
-    width: 750px;
-    height: 460px;
-    padding: 0 0 0 64px;
-    display: flex;
-}
-
 
 /*----------Terceiro Bloco----------*/
 
+.subTitleSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 40px;
+}
+
+.square-empty, .square-filled {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+}
+
+.square-empty {
+    background-color: transparent;
+    border: 1px solid #F19500;
+}
+
+.square-filled {
+    background-color: #F19500;
+    border: 1px solid #F19500;
+}
+
+.line {
+    width: 25px;
+    height: 1px;
+    background-color: #F19500;
+    display: inline-block;
+}
+
+h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F19500;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
 
 .searchBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: 600px;
     background-image: url(../assets/Background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
+}
 
-    .subTitleSearch {
-        margin: 80px 0 0 0;
-        font-family: "Chakra Petch";
+.subTitleSearch {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 80px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #F19500;
+}
+
+.titleSearch {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 15px 0 0 0;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchInput {
+    margin: 200px 0 0 0;
+    padding: 18px;
+    font-size: 23px;
+    width: 974px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #323232;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.search {
+    margin: 24px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
+    width: 140px;
+    height: 44px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .firstBlock, .secondBlock, .searchBlock {
+        padding: 20px;
+    }
+
+    .textsFirstBlock, .textsSecondBlock {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .title, .titleSecondBlock, .titleSearch {
+        font-size: 45px;
+    }
+
+    .description {
         font-size: 14px;
-        font-weight: 700;
-        color: #F19500;
     }
 
-    .titleSearch {
-        margin: 15px 0 0 0;
-        font-family: "Chakra Petch";
-        font-size: 60px;
-        font-weight: bold;
-        color: #ffffff;
+    .searchInput {
+        width: 90vw;
+        font-size: 20px;
     }
 
-    .search-bar {
+    .search, .searchFirstBlock, .aboutus {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+    }
+}
 
-        display: flex;
-        justify-content: center;
+@media (max-width: 768px) {
+    .firstBlock {
+        height: 100vh;
+    }
+
+    .textsFirstBlock, .textsSecondBlock {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .title, .titleSecondBlock, .titleSearch {
+        font-size: 36px;
+    }
+
+    .searchInput {
+        width: 90vw;
+        font-size: 18px;
+        margin-top: 180px;
+    }
+
+    .search, .searchFirstBlock, .aboutus {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .cardsSecondBlock {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    .cardsSecondBlock img {
+        width: 100%;
+        max-width: 500px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .textsSecondBlock {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .secondBlock {
+        height: auto;
         flex-direction: column;
         align-items: center;
-
-        .searchInput {
-            margin: 200px 0 0 0;
-            padding: 18px;
-            font-size: 23px;
-            width: 974px;
-            border: 1px solid #000000;
-            border-radius: 15px 15px 15px 15px;
-            text-align: center;
-            color: #ffffff;
-            background-color: #323232;
-            font-family: "Chakra Petch";
-        }
-
-        .search {
-
-            margin: 24px 0 0 0;
-            font-family: "Chakra Petch";
-            font-size: 14px;
-            font-weight: 700;
-            background-color: #F19500;
-            color: #000000;
-            width: 140px;
-            height: 44px;
-
-        }
     }
 
- 
+    .cardsSecondBlock {
+        order: 2;
+    }
+
+    .textsSecondBlock {
+        order: 1;
+    }
 }

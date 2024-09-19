@@ -1,8 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('menu-btn');
-    const linksHeader = document.querySelector('.linksHeader');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.getElementById('menu-btn');
+    const menuLinks = document.querySelector('.linksHeader');
 
-    menuBtn.addEventListener('click', () => {
-        linksHeader.classList.toggle('active');
+    menuButton.addEventListener('click', function () {
+        menuLinks.classList.toggle('active');
+    });
+
+    document.querySelector('.searchFirstBlock').addEventListener('click', function() {
+        document.getElementById('searchBlock').scrollIntoView({ behavior: 'smooth' });
     });
 });

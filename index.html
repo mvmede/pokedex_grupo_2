@@ -37,40 +37,50 @@
 
     <!----------Bloco 1---------->
 
-    <div class="firstBlock">
+    <section class="firstBlock">
         <div class="textsFirstBlock">
             <div class="subTitle">POKÉDEX</div>
             <div class="title">DESCUBRA TODO O UNIVERSO DE POKÉMON</div>
             <div class="description">Use a pesquisa avançada para explorar o mundo Pokémon.</div>
-            <a onClick="document.getElementById ('searchBlock').scrollIntoView();"><button class="searchFirstBlock">PESQUISAR</button></a>
+            <button class="searchFirstBlock">PESQUISAR</button>
         </div>
-    </div>
+    </section>
 
     <!----------Bloco 2---------->
 
-    <div class="secondBlock">
-        <div class="cardsSecondBlock"><img src="./assets/ashcards.png"></div>
+    <section class="secondBlock">
+        <div class="cardsSecondBlock"><img src="./assets/ashcards.png" alt="Cards de Pokémon"></div>
         <div class="textsSecondBlock">
             <div class="subTitleSecondBlock">POKÉDEX</div>
             <div class="titleSecondBlock">CONHEÇA TODOS OS ASPECTOS DO SEU POKÉMON FAVORITO</div>
-            <a href="./html/aboutus.html"><button class="aboutus">SOBRE NÓS</button></a>           
+            <a href="./html/aboutus.html"><button class="aboutus">SOBRE NÓS</button></a>
         </div>
-    </div>
+    </section>
 
     <!----------Bloco de Pesquisa---------->
 
-    <div id="searchBlock" class="searchBlock">
-        <p class="subTitleSearch">------ ÁREA POKEMON ------ </p>
-        <h1 class="titleSearch">PESQUISAR POKEMON</h1>
+    <section id="searchBlock" class="searchBlock">
+        <div class="subTitleSearch">
+            <div class="square-empty"></div>
+            <div class="square-filled"></div>
+            <div class="line"></div>
+            <h1>ÁREA POKÉMON</h1>
+            <div class="line"></div>
+            <div class="square-filled"></div>
+            <div class="square-empty"></div>
+        </div>
+        <h2 class="titleSearch">PESQUISAR POKÉMON</h2>
         <div class="search-bar">
             <form action="#" id="searchForm" method="GET">
-                <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..." name="query">
+                <input class="searchInput" id="searchInput" type="text" placeholder="Digite o nome do seu Pokémon..."
+                    name="query" />
             </form>
             <button class="search" id="search">PESQUISAR</button>
         </div>
-    </div>
+    </section>
 
     <!----------FOOTER---------->
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -82,10 +92,10 @@
             <div class="footer-links">
                 <p>Links</p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>       
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="./html/search.html">Pesquisar</a></li>
                     <li><a href="./html/aboutus.html">Sobre nós</a></li>
-                    <li><a href="./html/contact.html">Contato</a></li>                    
+                    <li><a href="./html/contact.html">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -96,7 +106,6 @@
     </footer>
     
     <script src="./script/menu.js"></script>
-
 </body>
 
 </html>
