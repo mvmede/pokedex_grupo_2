@@ -260,6 +260,7 @@ h1 {
 @media (max-width: 768px) {
     .firstBlock {
         height: 100vh;
+        background-position:left;
     }
 
     .textsFirstBlock, .textsSecondBlock {
