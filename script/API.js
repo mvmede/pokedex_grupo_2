@@ -7,7 +7,6 @@ function getCards(searchValue, page = 1) {
     if (!searchValue) {
         searchValue = document.getElementById("searchInput").value;
     }
-
     const searchValueEncoded = encodeURIComponent("name:" + searchValue);
 
     // Requisição para API
@@ -48,25 +47,25 @@ function getCards(searchValue, page = 1) {
 
                 // Após receber o retorno da API fazemos a adição do conteúdo dos cards dinamicamente
                 document.getElementById("cardsResults").innerHTML += `
-      <div class="card-container">
-            <div class="card-image">
-                <img src="${element.images.small}" alt="Imagem da Carta">
-            </div>
-            <div class="card-details">
-                <h2>${element.name}</h2>
-                <div class="specs" id="specs">
-                    <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
-                    <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
-                    <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "1"} </p></div>
-                </div>
-                ${attacks}
-            </div>
-            <div class="card-action">
-                <a href="#" class="buttonShowCard" data-large-image="${element.images.large}">VER CARTA</a>
-            </div>
-        </div>
-        <hr class="divisor">
-    `;
+                    <div class="card-container">
+                        <div class="card-image">
+                            <img src="${element.images.small}" alt="Imagem da Carta">
+                        </div>
+                        <div class="card-details">
+                            <h2>${element.name}</h2>
+                            <div class="specs" id="specs">
+                                <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
+                                <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
+                                <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "Desconhecido"} </p></div>
+                            </div>
+                            ${attacks}
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="buttonShowCard" data-large-image="${element.images.large}">VER CARTA</a>
+                        </div>
+                    </div>
+                    <hr class="divisor">
+                    `;
 
                 document.querySelectorAll('.buttonShowCard').forEach(button => {
                     button.addEventListener('click', function (event) {
