@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuButton.addEventListener('click', function () {
         menuLinks.classList.toggle('active');
+        menuButton.classList.toggle('active');
     });
 
     document.querySelector('.searchFirstBlock').addEventListener('click', function() {

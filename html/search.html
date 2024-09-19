@@ -7,35 +7,37 @@
   <title>Pokédex</title>
   <link rel="stylesheet" href="../css/headerandfooter.css" />
   <link rel="stylesheet" href="../css/contentsearch.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
-  </style>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap">
   <script type="text/javascript" src="../script/API.js"></script>
 
 </head>
 
 <body>
 
-  <!----------Header---------->
+  <!----------HEADER---------->
   <header>
     <div class="headerContainer">
-      <div class="logoHeader">
-        <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex" /></a>
-      </div>
-      <nav class="linksHeader">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../html/search.html" class="active">Pesquisar</a></li>
-          <li><a href="../html/aboutus.html">Sobre nós</a></li>
-          <li><a href="../html/contact.html">Contato</a></li>
-        </ul>
-      </nav>
+        <div class="logoHeader">
+            <a href="../index.html"><img src="../assets/Logo.png" alt="Pokedex"></a>
+        </div>
+        <div class="menu-toggle" id="menu-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="linksHeader">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/search.html" class="active">Pesquisar</a></li>
+                <li><a href="../html/aboutus.html">Sobre nós</a></li>
+                <li><a href="../html/contact.html">Contato</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <!----------Bloco de Pesquisa---------->
+  <!----------SEARCH---------->
   <div id="searchBlock" class="searchBlock">
     <div class="contact-title">
       <div class="square-empty"></div>
@@ -55,8 +57,7 @@
       <button class="search" id="search">PESQUISAR</button>
     </div>
   </div>
-
-  <!---------Resultado da Pesquisa--------->
+  
   <div class="search-results" id="searchResults"></div>
 
   <!-- CARDS -->
@@ -75,29 +76,28 @@
   <!--FOOTER-->
   <footer>
     <div class="footer-content">
-      <div class="footer-logo">
-        <img src="../assets/logo sobrenos.png" alt="Pokedex" />
-        <p class="footer-description">
-          Pokédex desenvolvida para todas as pessoas que desejam explorar o
-          mundo dos Pokémon.
-        </p>
-      </div>
-      <div class="footer-links">
-        <h2>Links</h2>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">Comparar</a></li>
-          <li><a href="../html/contact.html">Contato</a></li>
-          <li><a href="../html/search.html">Pesquisar</a></li>
-          <li><a href="../html/aboutus.html">Sobre nós</a></li>
-        </ul>
-      </div>
+        <div class="footer-logo">
+            <img src="../assets/logo sobrenos.png" alt="Pokedex">
+            <p class="footer-description">
+                Pokédex desenvolvida para todas as pessoas que desejam explorar o mundo dos Pokémon.
+            </p>
+        </div>
+        <div class="footer-links">
+            <p>Links</p>
+            <ul>
+                <li><a href="../index.html">Home</a></li>       
+                <li><a href="../html/search.html">Pesquisar</a></li>
+                <li><a href="../html/aboutus.html">Sobre nós</a></li>
+                <li><a href="../html/contact.html">Contato</a></li>                    
+            </ul>
+        </div>
     </div>
     <div class="footer-line"></div>
     <div class="footer-bottom">
-      <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
+        <p>©Pokédex by Caique, Gustavo, Julia & Vinnie.</p>
     </div>
   </footer>
+
   <script src="../script/menu.js"></script>
 </body>
 
