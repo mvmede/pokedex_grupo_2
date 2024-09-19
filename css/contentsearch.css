@@ -4,7 +4,47 @@ body {
     padding: 0;
     overflow-x: hidden; 
 }
-/*----------Primeiro Bloco----------*/
+/*----------SEARCH----------*/
+
+.subTitleSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 40px;
+}
+
+.square-empty, .square-filled {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+}
+
+.square-empty {
+    background-color: transparent;
+    border: 1px solid #F19500;
+}
+
+.square-filled {
+    background-color: #F19500;
+    border: 1px solid #F19500;
+}
+
+.line {
+    width: 25px;
+    height: 1px;
+    background-color: #F19500;
+    display: inline-block;
+}
+
+h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F19500;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
 
 .searchBlock {
     display: flex;
@@ -16,60 +56,58 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
+.subTitleSearch {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 80px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #F19500;
+    margin-top: 50px;
+}
 
-    .subTitleSearch {
-        margin: 80px 0 0 0;
-        font-family: "Chakra Petch";
-        font-size: 14px;
-        font-weight: 700;
-        color: #F19500;
-    }
+.titleSearch {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 15px 0 0 0;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
 
-    .titleSearch {
-        margin: 15px 0 0 0;
-        font-family: "Chakra Petch";
-        font-size: 60px;
-        font-weight: bold;
-        color: #ffffff;
-    }
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .search-bar {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-        
-        .searchInput {
-            margin: 200px 0 0 0;
-            padding: 18px;
-            font-size: 23px;
-            width: 974px;
-            border: 1px solid #000000;
-            border-radius: 15px 15px 15px 15px;
-            text-align: center;
-            color: #ffffff;
-            background-color: #323232;
-            font-family: "Chakra Petch";
-        }
+.searchInput {
+    margin: 200px 0 0 0;
+    padding: 18px;
+    font-size: 23px;
+    width: 974px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #323232;
+    font-family: "Chakra Petch", sans-serif;
+}
 
-        .search {
-            margin: 24px 0 0 0;
-            font-family: "Chakra Petch";
-            font-size: 14px;
-            font-weight: 700;
-            background-color: #F19500;
-            color: #000000;
-            width: 140px;
-            height: 44px;
-        }
-    
+.search {
+    margin: 24px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
+    width: 140px;
+    height: 44px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
 
-
-
-/*---------- Conteudos-------------*/
+/*----------CONTENT-------------*/
 
 .search-results {
     margin: 30px 0 30px 0;
@@ -113,11 +151,9 @@ body {
     color: #F19500;
 }
 .specs {
-
-display: flex;
-margin: 0 20px 0 0;
-
+    display: flex;
 }
+
 .typeClass {
     background-color: #6300b4;
     height: auto;
@@ -162,12 +198,15 @@ margin: 0 20px 0 0;
     background-color: #F5A623;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     display: inline-block;
     font-family: "Chakra Petch";  
-    font-size: 14px;  
+    font-size: 14px;
+    border: 1px solid #000000;
+    cursor: pointer;
 }
+
 
 .pagination {
     display: flex;
@@ -186,6 +225,7 @@ margin: 0 20px 0 0;
     text-decoration: none;
     border-radius:3px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .pagination .btn.active {
@@ -201,79 +241,6 @@ margin: 0 20px 0 0;
     padding: 10px 15px;
     color: #4A4A4A;
 }
-/* Base */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-.contact-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    margin-bottom: 40px;
-}
-
-.square-empty, .square-filled {
-    width: 7px;
-    height: 7px;
-    display: inline-block;
-}
-
-.square-empty {
-    background-color: transparent;
-    border: 1px solid #F19500;
-}
-
-.square-filled {
-    background-color: #F19500;
-    border: 1px solid #F19500;
-}
-
-.line {
-    width: 25px;
-    height: 1px;
-    background-color: #F19500;
-    display: inline-block;
-}
-h2 {
-  font-family: 'Sora', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #F19500;
-    margin: 0 5px;
-    text-transform: uppercase;
-}
-
-.titleSearch {
-    margin: 15px 0 0 0;
-    font-family: "Chakra Petch";
-    font-size: 60px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.search-bar {
-    width: 80%; 
-    margin: 10px auto; 
-    padding: 10px; 
-}
-
-
-
-.search {
-    margin: 24px 0 0 0;
-    font-family: "Chakra Petch";
-    font-size: 14px;
-    font-weight: 700;
-    background-color: #F19500;
-    color: #000000;
-    width: 140px;
-    height: 44px;}
-
-
 
 .modal {
     display: none;
@@ -308,32 +275,34 @@ h2 {
 
 #closeModalButton {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px 20px;
     background-color: #F5A623;
     color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 4% ;
+    border: 1px solid #000000;
     cursor: pointer;
     font-family: "Chakra Petch" ;
     font-weight: bold;
     font-size: 18px;
 }
-/* Responsividade para Tablets  */
-@media (max-width: 1024px) {
-    .searchInput {
-        width: 100vw;
-        font-size: 20px;
-    }
 
+/* RESPONSIVITY */
+@media (max-width: 1024px) {
     .titleSearch {
         font-size: 45px;
     }
 
-    .search {
-        width: 100px;
-        height: auto;
-        font-size: 12px;
+    .searchInput {
+        width: 90vw;
+        font-size: 20px;
     }
+
+    .search {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+    }
+    
     .card-action{
         display: none;
     }
@@ -345,67 +314,75 @@ h2 {
     .card-details p {
         width: 80vw;
     }
-    .card-details h2 {
-        text-align: center;
-    }
+    
 }
 
-/* Responsividade para Mobile */
-@media (max-width: 768px) and (min-width: 485px) {
-    .searchBlock {
-        width: auto;
-    }
-    .searchInput {
-        width: 90vw;
-        font-size: 23px;
-        margin-top: 50vw
+@media (max-width: 768px) {    
+    .titleSearch {
+        font-size: 36px;
     }
 
-    .titleSearch {
-        font-size: 40px;
-        width: 86vw;
+    .searchInput {
+        width: 90vw;
+        font-size: 18px;
+        margin-top: 200px;
+    }
+
+    .searchBlock {
+        height: 100vh;
     }
 
     .search {
-    
-        font-size:15px;
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+        margin-bottom: 60px;
     }
-    
-
+       
     .card-container {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     .card-image img {
         max-width: 100%;
     }
 
-    .card-details p {
-        width: 90vw;
-        font-size: 14px;
-        gap: 10vw;
-    }
-
-    .specs {
-        flex-direction: row;
+    .card-details {
         margin: 0;
     }
 
-    .typeClass, .level, .hp {
-        width: 140px;
-        margin: 5px 2px;
-        
-        
+    .card-details h2 {
+        text-align: center;
+    }
+    
+    .card-details p {
+        font-size: 14px;
+        width: 100%;
+        margin: 0;
     }
 
-
-    .pagination {
-        flex-direction: row; 
+    .specs {
+        display: flex;
+        flex-direction: row;
         justify-content: center; 
-        align-items: center; 
-        gap: 5px; 
+        align-items: center;
+        gap: 5px;
+        margin: 0 0 10px 0;
+    }
+
+    .typeClass, .level, .hp {
+        overflow-x: hidden;
+        margin: 0;
+    }
+    
+    .pagination .btn {
+        padding: 10px 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
-
-  

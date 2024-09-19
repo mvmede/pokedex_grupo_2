@@ -56,7 +56,7 @@ function getCards(searchValue, page = 1) {
                             <div class="specs" id="specs">
                                 <div class="typeClass" id="type"><p><strong>Tipo:</strong> ${element.types ? element.types[0] : "Raro"}</p></div>
                                 <div class="hp" id="hp"><p><strong>HP:</strong> ${element.hp}</p></div>
-                                <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "Desconhecido"} </p></div>
+                                <div class="level" id="level"><p><strong>Level:</strong> ${element.level ? element.level[0] : "N/A"} </p></div>
                             </div>
                             ${attacks}
                         </div>
@@ -115,7 +115,7 @@ function createPagination(totalPages) {
 
     //botão de voltar
     const prevButton = document.createElement("button");
-    prevButton.innerText = "Anterior";
+    prevButton.innerText = "←";
     prevButton.className = "btn previous";
     prevButton.disabled = currentPage === 1;
     prevButton.onclick = () => changePage(currentPage - 1);
@@ -146,7 +146,7 @@ function createPagination(totalPages) {
 
     //botão de avançar
     const nextButton = document.createElement("button");
-    nextButton.innerText = "Avançar";
+    nextButton.innerText = "→";
     nextButton.className = "btn next";
     nextButton.disabled = currentPage === totalPages;
     nextButton.onclick = () => changePage(currentPage + 1);
