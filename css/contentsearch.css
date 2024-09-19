@@ -208,12 +208,43 @@ body {
     overflow-x: hidden;
 }
 
-.subTitleSearch {
-    margin: 80px 0 0 0;
-    font-family: "Chakra Petch";
+.contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 40px;
+}
+
+.square-empty, .square-filled {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+}
+
+.square-empty {
+    background-color: transparent;
+    border: 1px solid #F19500;
+}
+
+.square-filled {
+    background-color: #F19500;
+    border: 1px solid #F19500;
+}
+
+.line {
+    width: 25px;
+    height: 1px;
+    background-color: #F19500;
+    display: inline-block;
+}
+h2 {
+  font-family: 'Sora', sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     color: #F19500;
+    margin: 0 5px;
+    text-transform: uppercase;
 }
 
 .titleSearch {
@@ -326,8 +357,8 @@ body {
     }
     .searchInput {
         width: 90vw;
-        font-size: 30px;
-        margin-top: 40vw;
+        font-size: 23px;
+        margin-top: 50vw
     }
 
     .titleSearch {
@@ -336,9 +367,8 @@ body {
     }
 
     .search {
-        width: auto;
-        height: auto;
-        font-size:auto;
+    
+        font-size:15px;
     }
     
 
