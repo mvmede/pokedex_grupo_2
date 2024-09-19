@@ -63,10 +63,10 @@ h1 {
 
 .descriptionAboutUs {
     font-family: 'Sora', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     width: 80vw;
-    margin: 48px 0;
+    margin: 150px 0;
 }
 
 @media (max-width: 1024px) {
