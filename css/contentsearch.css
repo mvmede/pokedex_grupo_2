@@ -16,6 +16,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
 
 
     .subTitleSearch {
@@ -39,6 +40,7 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
         
         .searchInput {
             margin: 200px 0 0 0;
@@ -63,9 +65,9 @@ body {
             width: 140px;
             height: 44px;
         }
-    }
+    
 
-}
+
 
 /*---------- Conteudos-------------*/
 
@@ -199,6 +201,47 @@ margin: 0 20px 0 0;
     padding: 10px 15px;
     color: #4A4A4A;
 }
+/* Base */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.subTitleSearch {
+    margin: 80px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 700;
+    color: #F19500;
+}
+
+.titleSearch {
+    margin: 15px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.search-bar {
+    width: 80%; 
+    margin: 10px auto; 
+    padding: 10px; 
+}
+
+
+
+.search {
+    margin: 24px 0 0 0;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #F19500;
+    color: #000000;
+    width: 140px;
+    height: 44px;}
+
 
 
 .modal {
@@ -244,3 +287,95 @@ margin: 0 20px 0 0;
     font-weight: bold;
     font-size: 18px;
 }
+/* Responsividade para Tablets  */
+@media (max-width: 1024px) {
+    .searchInput {
+        width: 100vw;
+        font-size: 20px;
+    }
+
+    .titleSearch {
+        font-size: 45px;
+    }
+
+    .search {
+        width: 100px;
+        height: auto;
+        font-size: 12px;
+    }
+    .card-action{
+        display: none;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-details p {
+        width: 80vw;
+    }
+    .card-details h2 {
+        text-align: center;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) and (min-width: 485px) {
+    .searchBlock {
+        width: auto;
+    }
+    .searchInput {
+        width: 90vw;
+        font-size: 30px;
+        margin-top: 40vw;
+    }
+
+    .titleSearch {
+        font-size: 40px;
+        width: 86vw;
+    }
+
+    .search {
+        width: auto;
+        height: auto;
+        font-size:auto;
+    }
+    
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-image img {
+        max-width: 100%;
+    }
+
+    .card-details p {
+        width: 90vw;
+        font-size: 14px;
+        gap: 10vw;
+    }
+
+    .specs {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .typeClass, .level, .hp {
+        width: 140px;
+        margin: 5px 2px;
+        
+        
+    }
+
+
+    .pagination {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 5px; 
+    }
+}
+
+  
