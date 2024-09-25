@@ -17,7 +17,7 @@ body {
 }
 
 .textsFirstBlock {
-    width: 600px;
+    width: 850px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -28,7 +28,7 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #ffffff;
+    color: #F19500;
     text-align: left;
 }
 
@@ -232,6 +232,21 @@ h1 {
         padding: 20px;
     }
 
+    .firstBlock {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/Bannertablet.png);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .subTitle {
+        color: #F19500;
+    }
+
     .textsFirstBlock, .textsSecondBlock {
         width: 90%;
         padding: 20px;
@@ -261,6 +276,21 @@ h1 {
     .firstBlock {
         height: 100vh;
         background-position:left;
+    }
+
+    .firstBlock {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/Bannerphone.png);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .subTitle {
+        color: #F19500;
     }
 
     .textsFirstBlock, .textsSecondBlock {
