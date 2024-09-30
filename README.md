@@ -62,21 +62,21 @@
   
 <br>
 <h2>👨🏻‍💻 Sobre o projeto</h2> 
-<p>Lorem
+<p> Pokédex é um site desenvolvido em 2024 como projeto final do curso da Coderhouse. Inspirada no universo Pokémon, a plataforma permite que os usuários explorem uma vasta coleção de cartas, com detalhes completos sobre atributos e habilidades dos Pokémon. Com uma interface intuitiva, o site oferece uma experiência imersiva e informativa para os fãs. Criado com dedicação, é uma ferramenta educativa única, projetada para capturar a essência desse universo fascinante.
 </p>
 
 <br>
  
  <h2>📄 Sobre as entregas do projeto</h2>
- ✔️ Organização: Lorem <br>
- ✔️ Design: A Interface foi desenvolvida através do programa Figma <br>
- ✔️ Front-end: Interface realizada com as seguintes tecnologias: HTML5, CSS3; JavaScript; <br>
+ ✔️ Organização: Nos organizamos por meio de reuniões feitas via Google Meet, Zoom e WhatsApp. Determinando tarefas a cada integrante do grupo. <br>
+ ✔️ Design: A Interface foi desenvolvida através do programa Figma. <br>
+ ✔️ Front-end: Interface realizada com as seguintes tecnologias: HTML5, CSS3; JavaScript. <br>
 
 <br>
 
    <h2>🎁 Agradecimentos </h2>
-  <h4>Agradecemos ao professor Danilo Aparecido da Coderhouse, pelo ensino e carinho com todos os alunos da turma.<h4>
+  <h4>Agradecemos ao professor Danilo Aparecido e o nosso Tutor Felipe Nascimento da Coderhouse, pelos ensinos e carinho com todos os alunos da turma.<h4>
 
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmFmc3B3YzQ2cnlhOHJncnByYXVkeHpoNzY3ZDY2cmtzcXB0bnF3aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Guccz4Oq87bncsm1j4/giphy.webp" alt="Joia" width="auto" height="auto">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDN4M2tmeXN3OGlrOGF6YmVwMmFtZjczbHl3dmVwZDB1NGNqemRmbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mYhd1NHQkHmZLiqN7M/giphy.webp" alt="Joia" width="auto" height="auto">
 
       
